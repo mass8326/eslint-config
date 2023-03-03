@@ -1,7 +1,12 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: ["svelte3"],
+  plugins: ["svelte"],
   extends: ["./index.js"],
-  settings: { "svelte3/typescript": require("typescript") },
-  overrides: [{ files: ["*.svelte"], processor: "svelte3/svelte3" }],
+  overrides: [
+    {
+      files: ["*.svelte"],
+      parser: "svelte-eslint-parser",
+      parserOptions: { parser: "@typescript-eslint/parser" },
+    },
+  ],
 };

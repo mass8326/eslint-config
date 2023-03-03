@@ -12,13 +12,14 @@ const groups = [
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "import", "unicorn"],
+  plugins: ["@typescript-eslint", "import", "prettier", "unicorn"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:unicorn/recommended",
+    "plugin:prettier/recommended",
   ],
   parserOptions: { sourceType: "module", ecmaVersion: "latest" },
   rules: {
