@@ -12,23 +12,34 @@ const groups = [
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   parser: "@typescript-eslint/parser",
+  parserOptions: { sourceType: "module", ecmaVersion: "latest" },
   plugins: ["@typescript-eslint", "import", "prettier", "unicorn"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended",
   ],
-  parserOptions: { sourceType: "module", ecmaVersion: "latest" },
+  overrides: [
+    {
+      // Dynamic import() may be needed for ambient declarations
+      files: ["*.d.ts"],
+      rules: { "@typescript-eslint/consistent-type-imports": "off" },
+    },
+    {
+      // Many config files still require CommonJS to be used
+      files: ["*.cjs"],
+      rules: { "@typescript-eslint/no-var-requires": "off" },
+    },
+  ],
   rules: {
-    "@typescript-eslint/consistent-type-imports": "error",
-    "@typescript-eslint/no-unused-vars": "error",
-    "import/namespace": "off", // Handled by typescript
-    "import/no-unresolved": "off", // Handled by typescript
+    // Import consistency
     "import/order": ["warn", { alphabetize: { order: "asc" }, groups }],
     "sort-imports": ["warn", { ignoreDeclarationSort: true }],
+    // Personal opinion
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-unused-vars": "error",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
   },
