@@ -1,26 +1,38 @@
 {
   "name": "@mgnsfr/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Magnus Reyes",
   "email": "me@magnusreyes.com",
   "repository": "github:mass8326/eslint-config",
   "license": "MIT",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-import-resolver-typescript": "^3.0.0",
     "eslint-plugin-import": "^2.0.0",
-    "eslint-plugin-svelte3": "^4.0.0",
-    "eslint-plugin-unicorn": "^46.0.0"
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-svelte": "^2.0.0",
+    "eslint-plugin-unicorn": "^46.0.0",
+    "prettier": "^2.0.0",
+    "prettier-plugin-svelte": "^2.0.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.21.1",
-    "@typescript-eslint/eslint-plugin": "^5.52.0",
-    "@typescript-eslint/parser": "^5.52.0",
-    "eslint": "^8.34.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-svelte": "^2.19.2",
     "eslint-plugin-unicorn": "^46.0.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0",
     "svelte": "^3.55.1",
+    "svelte-eslint-parser": "^0.23.0",
     "typescript": "^4.9.5"
   }
 }
