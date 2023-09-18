@@ -38,9 +38,11 @@ module.exports = {
     "import/order": ["warn", { alphabetize: { order: "asc" }, groups }],
     "sort-imports": ["warn", { ignoreDeclarationSort: true }],
     // Personal opinion
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
+    "no-undef": "off", // Handled by typescript
   },
 };
