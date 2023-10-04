@@ -8,8 +8,12 @@ module.exports = {
       parser: "svelte-eslint-parser",
       parserOptions: { parser: "@typescript-eslint/parser" },
       rules: {
-        "no-self-assign": "off", // May be needed to trigger reactivity
-        "unicorn/no-useless-undefined": "off", // May be needed to make a prop optional
+        // Declarations in <script> are parsed as inner declarations
+        "no-inner-declarations": "off",
+        // May be needed to trigger reactivity
+        "no-self-assign": "off",
+        // May be needed to make a component prop optional
+        "unicorn/no-useless-undefined": "off",
       },
     },
   ],
