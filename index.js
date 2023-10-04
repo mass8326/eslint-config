@@ -41,8 +41,11 @@ module.exports = {
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-unused-vars": "error",
+    "unicorn/catch-error-name": "off",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
+    "unicorn/switch-case-braces": ["error", "avoid"],
+    "no-console": ["error", { allow: ["debug", "info", "warn", "error"] }],
     "no-undef": "off", // Handled by typescript
   },
 };
